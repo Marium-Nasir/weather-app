@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    overflow: hidden;
+}
+.cont{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* **************************header************************ */
+.header{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    background-color:rgb(6, 6, 34);
+    position: relative;
+}
+.header .logo {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    /* background-color: blue; */
+    color: aliceblue;
+    padding: 4%;
+    /* flex-direction: column; */
+}
+.header .list {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    /* background-color: blue; */
+    color: aliceblue;
+    padding: 1.5%;
+    position: absolute;
+    left: 69%;
+    top: 5%;
+    /* flex-direction: column; */
+}
+
+.header ul{
+
+    display: flex;
+}
+.header ul li {
+    list-style: none;
+    padding: 0 2rem;
+}
+.header ul li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+/* ******************************main content*************** */
+.maincont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: aliceblue;
+    /* margin-top: 2rem; */
+    /* border: 2px solid black;
+    border-radius: 2rem; */
+    line-height: 4rem;
+    /* line-height: 2rem; */
+    background-image: url("images/sunrise.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#subbtn{
+    height: 3rem;
+    width: 7rem;
+    background: gray;
+    color: aliceblue;
+    border-radius: 2rem;
+    outline: none;
+    font-size: 1.2rem;
+    position: relative;
+    right: 20%;
+    top: 30%;
+}
+#inputval{
+    height: 4rem;
+    width: 35rem;
+    border-radius: 2rem;
+    outline: none;
+    position: relative;
+    margin-bottom: 4rem;
+    padding: 0 2rem;
+    font-size: 1rem;
+}
+#errorbox{
+    height: 50%;
+    width: 50%;
+    background-color: black;
+    color: aliceblue;
+    
+}
+
+/* *********************************footer****************** */
+.footer{
+    height: 7%;
+    width: 100%;
+    color:aliceblue;
+    background-color: rgb(6, 6, 34);
+    margin-top: auto;
+}
+.footer p{
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    line-height: 2rem;
+}

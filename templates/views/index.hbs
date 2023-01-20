@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="cont">
+        <div class="header">
+            <nav>
+                <div class="logo">
+                    <h1>Welcome To Weather App</h1>
+                </div>
+                <div class="list">
+                    {{!-- <ul>
+                        <li><a href="/index">Home</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/weather">Weather</a></li>
+                    </ul> --}}
+                </div>
+            </nav>
+        </div>
+
+        <div class="maincont">
+            <main>
+                <div class="search">
+                    <form>
+                        <input type="text" id="inputval" placeholder="Enter Your City Name">
+                        <input type="submit" value="search" id="subbtn">
+                    </form>
+                </div>
+                <div id="getval">
+                    <h1 id="cityname"></h1><h1><span id="mood"></span></h1>
+
+                    <h2>
+                        <span id="ctemp"></span><sup>o</sup>C <span> Feels Like : <span id="ftemp"></span><sup>o</sup>C
+                    </h2>
+                    <p id="datentime">
+                        <span id="date"></span>
+                        <span id="time"></span>
+                    </p>
+                    <h3>
+                        <span>MIN : <span id="mintemp"></span> <span> MAX : 
+                            <span id="maxtemp"></span>
+                            </span>
+                    </h3>
+                </div>
+
+                <div id="errorbox" hidden>
+                    <p>please Enter correct City name</p>
+                </div>
+
+            </main>
+
+        </div>
+        <div class="footer">
+            <footer>
+                <p>Creted by Marium Nasir</p>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        let showtime = () => {
+            let date = new Date();
+            let hr = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+            let day = date.toLocaleDateString('default', { weekday: "long" })
+            let d = date.getDate();
+            let m = date.toLocaleDateString('default', { month: "long" })
+            let year = date.getFullYear();
+            let am = "AM";
+            if (hr == 0) {
+                hr = 12;
+            }
+            if (hr > 12) {
+                hr -= 12;
+                am = "PM";
+            }
+            hr = (hr < 10) ? "0" + hr : hr;
+            min = (min < 10) ? "0" + min : min;
+            sec = (sec < 10) ? "0" + sec : sec;
+
+            document.getElementById("time").innerText = `${hr} : ${min} : ${sec} ${am}`
+
+            document.getElementById("date").innerText = `${day} | ${d} / ${m} / ${year} `
+        }
+        setInterval(showtime, 1000);
+    </script>
+</body>
+
+</html>
